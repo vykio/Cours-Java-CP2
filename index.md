@@ -1,37 +1,124 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/vykio/Cours-Java-CP2/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# Java - Cours1
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Les tableaux:
 
-### Markdown
+   Les tableaux sont des objets.
+    **syntaxe**: 
+`type [] nomDuTableau;`
+    
+   *exemple*: 
+    
+	    int [] tableau;
+	    tableau = new int[50];
+	    int [] tab2 = tableau; /* tab2 est le meme tableau que "tableau" */
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+   Java vérifie dynamiquement que la valeur de l'élément existe sinon : "Erreur OutOfBoundsExecption"
 
-```markdown
-Syntax highlighted code block
+    Taille du tableau: tableau.length;
+    Indice max du tableau: tableau.length-1;
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+# Classes et Objets:
 
-1. Numbered
-2. List
+   Orienté Objet (O.O.):
+   - Une boite noire
+   - Un objet sans classe n'a pas de Classes
+   - Héritage
+   - UML
 
-**Bold** and _Italic_ and `Code` text
+  Idée centrale:
+            Placer les entités, objets ou acteurs du problème à la base de la conception
+            On met en avant les données.
 
-[Link](url) and ![Image](src)
-```
+   ► La Classe:
+	   • Données **[Attributs]**
+	   • Procédures et fonctions **[Méthodes]**
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  Elle a: Une **structure** et un **comportement**.
 
-### Jekyll Themes
+Les objets sont des représentations, on parle **d'instances** du modèle défini dans les Classes
+Une classe permet d'instancer (créer) plusieurs modèles
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vykio/Cours-Java-CP2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+     statique : partagée à toutes les Classes
+	 dynamique: propre à chaque Classe
 
-### Support or Contact
+   # Instanciation:
+	   new constructeur (<liste de paramètres>)
+	 
+Les constructeurs ont le même nom que la classe.
+Sans paramètre: 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    Etudiant e1;
+    e1 = new Etudiant();
+    Etudiant e2, e3;
+    e2 = new Etudiant();
+    e3 = e2; //Exactement le même
+
+# Déclaration des méthodes
+1. Constructeurs: Créer des objets
+2. Accesseurs: Accéder aux données de nos objets
+3. Méthodes de classe
+
+###  Constructeurs
+Ils sont appelés qu'une seule fois lors de la création de l'instance.
+Il n'est pas obligatoire.
+### Accesseurs
+Accéder aux attributs d'une classe, éventuellement de les modifier.
+### Méthodes de classe
+permet de travailler directement sur les instances de classe
+Gestion, édition, affichage, calcul sur les objets.
+
+*exemple:*
+- toUpper() (mise en majuscule)
+- subString() (récupération d'une sous-chaîne
+
+## Méthodes
+Déclaration d'une méthode
+
+    <typeRetour> nomMethode( <liste de paramètres> ) {
+		<corps de la méthode>
+	}
+
+# Gestion de la mémoire
+L'instanciation provoque une allocation dynamique de la mémoire.
+
+> En Java, pas de soucis de mémoire.
+
+Si un objet n'est plus référence, la mémoire allouée est libérée automatiquement. Ce processus de libération de la mémoire est appelé **Garbage Collector** ou **Ramasse-miettes**.
+
+# Un constructeur plus élaboré
+
+	public class Etudiant {
+		
+		String nom;
+		String prenom;
+		int anneeNaissance;
+		int nbNotes;
+		int [] notes;
+		
+		public Etudiant() { //Meme nom que la classe => C'est un constructeur
+			nom = "Inconnu";
+			prenom = "Inconnu";
+			nbNotes = 0;
+			notes = new int[20];
+		}
+
+		/* Deuxième constructeur */
+		public Etudiant(String n, String p, int a) {
+			nom = n;
+			prenom = p;
+			anneeNaissance = a;
+			nbNotes = 0;
+			notes = new int[20];
+		}
+	}
+
+> 
+
+	Premier constructeur: Création d'un étudiant
+	Deuxième constructeur: Création de l'étudiant Jean Dupont
+
+> Le constructeur sera choisi selon ses paramètres
+
+
