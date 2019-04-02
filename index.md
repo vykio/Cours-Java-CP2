@@ -1,6 +1,8 @@
 
 # Java - Cours1
 
+[Cours Suivant (#2)](https://vykio.github.io/Cours-Java-CP2/2.md "Cours Java n°2")
+
 # Les tableaux:
 
    Les tableaux sont des objets.
@@ -156,18 +158,47 @@ Trois types:
 
     public class Voiture {
 	
-		int annee;
-		String marque;
-		String couleur;
-		boolean neuve;
+		private int annee;
+		private String marque;
+		private String couleur;
+		private boolean neuve;
 
 		public Voiture (String marque, String couleur, int annee, boolean neuve) {
 			this.annee = annee;
 			this.marque = marque;
 			this.couleur = couleur;
 			this.neuve = neuve;
-			System.out.println("Voiture créée: "+ marque + " " + rouge + " de " + annee);
+			System.out.println("Voiture créée: "+ this.marque + " " + this.couleur+ " de " + this.annee);
 		}
 
 	}
 
+---------------
+> Créer classe équation pour résoudre les équations du second degré
+> - eq.discriminant()
+> - eq.resolution()
+
+    public class Equation {
+		
+		private double a;
+		private double b;
+		private double c;
+		
+		public Equation(double a, double b, double c) {
+			this.a = a;
+			this.b = b;
+			this.c = c;
+		}
+
+		public double discriminant() {
+			return (this.b*this.b-4*this.a*this.c);
+		}
+
+		public void resolution() {
+			double d = discriminant();
+			if (d>0.0) {
+				/* Afficher les racines... */
+			}
+		}
+
+	}
