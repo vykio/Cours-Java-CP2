@@ -1,7 +1,7 @@
 
 # Java - Cours1
 
-[Cours Suivant (#2)](https://vykio.github.io/Cours-Java-CP2/2.md "Cours Java n°2")
+[Cours Suivant (#2)](https://vykio.github.io/Cours-Java-CP2/2 "Cours Java n°2")
 
 # Les tableaux:
 
