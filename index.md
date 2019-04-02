@@ -121,4 +121,53 @@ Si un objet n'est plus référence, la mémoire allouée est libérée automatiq
 
 > Le constructeur sera choisi selon ses paramètres
 
+# L'objet "This"
+
+Mot clé désignant l'objet courant. 
+
+	public Etudiant(String n, String p, int a) {
+		this.nom = n;
+		this.prenom = p;
+		this.anneeNaissance = a;
+		this.nbNotes = 0;
+		this.notes = new int[20];
+	}
+
+# Accès aux attributs d'un objet
+On utilise la notation :
+
+    nomObjet.nomAttribut
+
+On utilisera le principe d'**encapsulation**
+
+# Encapsulation
+
+Trois types:
+- **private**
+- **public**
+- protected
+
+# Exercice
+> Créer une classe Voiture
+> - Année (millésime)
+> - Marque
+> - Couleur
+> - Neuve (Boolean)
+
+    public class Voiture {
+	
+		int annee;
+		String marque;
+		String couleur;
+		boolean neuve;
+
+		public Voiture (String marque, String couleur, int annee, boolean neuve) {
+			this.annee = annee;
+			this.marque = marque;
+			this.couleur = couleur;
+			this.neuve = neuve;
+			System.out.println("Voiture créée: "+ marque + " " + rouge + " de " + annee);
+		}
+
+	}
 
